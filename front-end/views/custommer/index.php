@@ -38,7 +38,7 @@ if ($_SESSION != null) {
                         <td class=" text-uppercase"><?=$data['code_account']?></td>
                         <td><?= date_format(date_create($data['date_created']),'d.m.Y H:i')?></td>
                         <td style="width: 160px;">
-                            <button class="btn btn-sm btn-primary">Editer</button>
+                            <a href="update.php" class="btn btn-sm btn-primary" >Editer</a>
                             <button class="btn btn-sm btn-danger">Supprimer</button>
                         </td>
                     </tr>

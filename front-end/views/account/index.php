@@ -1,4 +1,11 @@
-<?php require_once '../layauts/app.php' ?>
+<?php
+session_start();
+if ($_SESSION != null) {
+
+    require_once '../layauts/app.php';
+    require_once '../../../back-end/controller/custommer.php';
+
+?>
 <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
         <h1 class="h2">Les comptes</h1>
@@ -36,4 +43,9 @@
 </main>
 
 
-<?php require_once '../layauts/footer.php' ?>
+<?php require_once '../layauts/footer.php';
+} else
+    header('Location:../../index.php');
+exit();
+
+?>
